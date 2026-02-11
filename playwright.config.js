@@ -26,16 +26,15 @@ export default defineConfig({
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
-  use: {
-    /* Base URL to use in actions like `await page.goto('')`. */
-    // baseURL: 'http://localhost:3000',
-
-    /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
-  },
+  
   use: {
     headless: false,
     viewport: { width: 1280, height: 720 },
+    
+    /* Change 'on-first-retry' to 'on' to fix the blank screen in UI mode */
+    trace: 'on', 
+    screenshot: 'on',
+    video: 'on-first-retry',
     // Launch options for all browsers
     launchOptions: {
       slowMo: process.env.CI ? 0 : 1000, // Adjust delay in ms
