@@ -7,7 +7,7 @@ class AuditPage {
         this.corporateaudit = page.locator('a[href="/AuditInspectionCorporate/CorporateAuditPlan"]'); 
         this.addaudit = page.locator('button.btn.btn-info'); 
         console.log("AuditPage initialized");
-
+        console.log("gfjfj");
 
     }
 
