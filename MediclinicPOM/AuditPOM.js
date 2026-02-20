@@ -3,11 +3,11 @@ class AuditPage {
         this.page = page;
 
 
-        // this.auditinspection = page.locator('.sidebar-link.d-flex.align-items-center.gap-2.collapsed');
+        this.auditinspection = page.locator('.sidebar-link.d-flex.align-items-center.gap-2.collapsed');
         this.corporateaudit = page.locator('a[href="/AuditInspectionCorporate/CorporateAuditPlan"]'); 
         this.addaudit = page.locator('button.btn.btn-info'); 
         console.log("AuditPage initialized");
-        // console.log("gfjfj");
+        console.log("gfjfj");
 
     }
 
